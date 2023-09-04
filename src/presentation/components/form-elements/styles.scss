@@ -1,0 +1,16 @@
+@import "../../styles/typography.scss";
+@import "../../styles/colorScheme";
+
+.select-wrapper {
+    width: 100%;
+    // position: relative;
+    select {
+        // position: absolute;
+        // top:100%;
+        @include body-3;
+        padding: 16px 22px 16px 16px;
+        background-color: #F7F8FD;
+        border: none;
+        width: 100%;
+    }
+}

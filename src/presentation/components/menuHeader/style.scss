@@ -1,0 +1,37 @@
+@import "../../styles/layout.scss";
+@import "../../styles/colorScheme";
+@import "../../styles/typography.scss";
+@import "../../styles/breakpoints.scss";
+
+.wrapper {
+    padding: $mobile-header-padding;
+    background-color: $colorGamma;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet-device {
+        margin-top: 40px;
+        border-radius: 10px;
+        padding: 14px 12px;
+    }
+
+    @include desktop-device {
+        margin-top: 0;
+    }
+}
+
+.wrapper-child-first {
+    display: flex;
+    align-items: center;
+    
+    p {
+        color: #F2F4FE;
+    }
+}
+
+.wrapper-child-first :last-child {
+    margin-left: 4px;
+    font-weight: bold;
+}

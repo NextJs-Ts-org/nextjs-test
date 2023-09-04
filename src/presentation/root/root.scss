@@ -1,0 +1,191 @@
+@import '../styles/colorScheme';
+@import '../styles/breakpoints.scss';
+@import '../styles/typography.scss';
+@import '../styles/layout.scss';
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop-device {
+      flex-wrap: wrap;
+      max-width: 1120px;
+      margin: auto;
+    }
+}
+
+.boxes-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    @include desktop-device {
+        width: 255px;
+        flex-direction: column;
+        height: 100%;
+    }
+  }
+  
+  .purple-box {
+    width: 100%;
+    background: radial-gradient(166.82% 166.82% at 103.90% -10.39%, #E84D70 0%, #A337F6 53.09%, #28A7ED 100%);
+    padding: $mobile-header-padding;
+    color: $colorDelta;
+    .purple-box-header {
+      @include h4;
+      color: $colorDelta;
+    }
+  
+    .purple-box-subheader {
+      opacity: 0.75;
+      @include body-3;
+      color: $colorDelta;
+    }
+  
+    @include tablet-device {
+      display: flex;
+      width: auto;
+      flex: 1;
+      border-radius: 10px;
+      height: 180px;
+      justify-content: flex-end;
+      flex-direction: column;
+  
+      .purple-box-header {
+        @include h2;
+        color: $colorDelta;
+      }
+  
+      .purple-box-subheader {
+        @include body-2;
+        color: $colorDelta;
+      }
+    }
+
+    @include desktop-device {
+        flex: auto;
+        max-height: 136px;
+    }
+  }
+  
+  .box {
+    display: none;
+  
+    @include tablet-device {
+      display: flex;
+      flex: 1;
+      margin-left: 10px;
+      background-color: $colorDelta;
+      border-radius: 10px;
+      height: 180px;
+    }
+  
+    @include desktop-device {
+        max-height: 136px;
+        margin-left: 0;
+        margin-top: 24px;
+    }
+  }
+
+.content {
+  width: 100%;
+  @include desktop-device {
+    margin-left: 30px;
+    max-width: 826px;
+  }
+}
+
+.elements {
+  margin-top: 32px;
+  padding: 0 24px;
+
+  @include tablet-device {
+    padding: 0;
+  }
+}
+
+.element {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $colorDelta;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 16px;
+
+  h1 {
+    @include body-3;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    @include body-3;
+    color: $colorZeta;
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    border-radius: 10px;
+    background-color: $colorEpsilon;
+    margin-bottom: 16px;
+    width: fit-content;
+    padding: 6px 16px;
+
+    p {
+      @include body-3;
+      font-weight: 600;
+      color: $colorBeta;
+    }
+  }
+
+  .details {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .details-votes {
+      display: flex;
+      align-items: center;
+      background-color: #F2F4FE;
+      padding: 6px 13px;
+      border-radius: 10px;
+      svg {
+        color: $colorBeta;
+        font-size: 15px;
+        margin-right: 10px;
+      }
+      p {
+        @include body-3;
+        font-weight: bold;
+      }
+    }
+
+    .details-comments {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 5px;
+        font-size: 15px;
+        color: #CDD2EE;
+      }
+      p {
+        @include body-3;
+        font-weight: bold;
+      }
+    }
+  }
+
+  @include tablet-device {
+    h1 {
+      @include h3;
+      margin-bottom: 10px;
+    }
+    p {
+      @include body-1;
+      margin-bottom: 12px;
+    }
+  }
+}

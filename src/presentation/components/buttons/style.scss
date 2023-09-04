@@ -1,0 +1,17 @@
+@import "../../styles/colorScheme";
+@import "../../styles/typography.scss";
+@import "../../styles/breakpoints.scss";
+
+.button {
+    width: auto;
+    padding: 11px 16px;
+    background-color: $colorAlpha;
+    border-radius: 10px;
+    text-decoration: none;
+    p {
+        @include body-3;
+        color: white;
+        font-weight: bold;
+    }
+}
+
